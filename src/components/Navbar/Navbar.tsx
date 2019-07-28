@@ -1,19 +1,21 @@
 import React from "react";
 import Link from "gatsby-link";
 
+import Button from "../Button/Button";
+
 import styles from "./styles.module.scss";
 
-
 export interface INavItems {
-    name: string;
-    slug: string;
+  name: string;
+  slug: string;
 }
 interface IProps {
   lang: string;
-  navItems : Array<INavItems>;
+  navItems: Array<INavItems>;
+  buttonLabel: string
 }
 
-const Header: React.FC<IProps> = ({ lang, navItems }) => {
+const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
   const [isBurgerActive, setBurgerActive] = React.useState<boolean>(false);
 
   const navbarLinks = navItems.map((item, index) => (
@@ -59,13 +61,9 @@ const Header: React.FC<IProps> = ({ lang, navItems }) => {
           className={`navbar-menu ${isBurgerActive && `is-active`}`}
         >
           <div className="navbar-end">
-              {navbarLinks}
+            {navbarLinks}
             <div className="navbar-item">
-              <div className="buttons">
-                <a className="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-              </div>
+              <Button className={styles.button} medium withBackground label={buttonLabel} />
             </div>
           </div>
         </div>

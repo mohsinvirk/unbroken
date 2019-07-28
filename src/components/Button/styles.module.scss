@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  font-family: $gtamerica;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 50px;
+}
+
+.withBackground {
+  background-color: $buttonOrangeColor;
+  color: $buttonWhiteTextColor;
+
+  &:focus-within {
+    outline: none;
+  }
+}
+
+.withoutBackground {
+  background-color: transparent;
+  color: $buttonBlackColor;
+  border: 1px solid $buttonBlackColor;
+
+  &:hover {
+    background-color: $buttonOrangeColor;
+    color: $buttonWhiteTextColor;
+    border: 1px solid transparent;
+  }
+}
+
+.medium {
+  padding: 16px 45px;
+}
+
+.large {
+  display: block;
+  width: 100%;
+  padding: 16px 90px;
+}
