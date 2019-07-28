@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.navbarItemLink {
+    color: $black;
+    box-sizing: border-box;
+    font-family: "GT America";
+    font-size: 16px;
+    font-weight: 400;
+    &:hover {
+        border-bottom: 4px solid $orange;
+    }
+}
+
+.navbarItem {
+box-sizing: border-box;
+}
