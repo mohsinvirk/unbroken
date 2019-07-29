@@ -57,8 +57,6 @@ const HomeFeatures: React.FC<IProps> = ({
             }
           `}
           render={data => {
-            console.log("data", data);
-
             return (
               <>
                 <HomeFeatureItem

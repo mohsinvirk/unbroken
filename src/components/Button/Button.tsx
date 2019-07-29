@@ -7,6 +7,7 @@ import styles from "./styles.module.scss";
 
 interface IProps {
   className?: string;
+  fullWidth?: boolean;
   large?: boolean;
   medium?: boolean;
   withBackground?: boolean;
@@ -16,6 +17,7 @@ interface IProps {
 
 const Button: React.FC<IProps> = ({
   className,
+  fullWidth,
   large,
   medium,
   withBackground,
@@ -24,7 +26,7 @@ const Button: React.FC<IProps> = ({
 }) => {
   return (
     <button
-      className={`${styles.button} ${large && styles.large} ${medium &&
+      className={`${styles.button} ${large && styles.large} ${fullWidth && styles.fullWidth} ${medium &&
         styles.medium} ${withBackground &&
         styles.withBackground} ${withoutBackground &&
         styles.withoutBackground} ${className}`}

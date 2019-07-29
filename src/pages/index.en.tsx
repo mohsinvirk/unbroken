@@ -4,6 +4,7 @@ import Layout from "../layouts/en";
 
 import HomeHero from "../components/HomeHero/HomeHero";
 import HomeFeatures from "../components/HomeFeatures/HomeFeatures";
+import HomeEtherium from "../components/HomeEtherium/HomeEtherium";
 
 const navItems = [
   {
@@ -42,6 +43,12 @@ const IndexPage = props => (
         exchangeSubHeading="During our private beta"
         idealHeading="Supported in Europe"
         idealSubHeading="Multiple payment methods"
+      />
+
+      <HomeEtherium
+        heading="Currency for the digital era"
+        subheading="Ethereum is a secure digital currency that is free to use for instant payments anywhere in the world. It is a new form of currency designed for the internet era."
+        buttonLabel="More about Ethereum"
       />
     </>
   </Layout>

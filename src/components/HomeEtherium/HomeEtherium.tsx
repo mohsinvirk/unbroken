@@ -8,52 +8,27 @@ import Button from "../Button/Button";
 import styles from "./styles.module.scss";
 
 interface IProps {
-  lang: string;
-  navItems: Array<INavItems>;
   heading: string;
-  subheading1: string;
-  subheading2: string;
+  subheading: string;
   buttonLabel: string;
 }
 
-const HomeHero: React.FC<IProps> = ({
-  lang,
-  navItems,
+const HomeEtherium: React.FC<IProps> = ({
   heading,
-  subheading1,
-  subheading2,
+  subheading,
   buttonLabel
 }) => {
   return (
     <>
       <section className={`${styles.homeHero}`}>
-        <div className="container">
-          <Navbar lang={lang} navItems={navItems} buttonLabel="Sign up" />
-        </div>
         <div>
-          <div className="container">
+          <div className="">
             <div className={`columns ${styles.heroContent}`}>
-              <div className={`column ${styles.heroColumn}`}>
-                <div className={styles.heroHeading}>{heading}</div>
-
-                <div className={styles.heroSubHeading}>
-                  <p>{subheading1}</p>
-                  <p>{subheading2}</p>
-                </div>
-
-                <Button
-                  medium
-                  withBackground
-                  label={buttonLabel}
-                  className={styles.button}
-                />
-              </div>
-
-              <div className={`column ${styles.heroColumn}`}>
+              <div className={`column is-6 ${styles.imageColumn}`}>
                 <StaticQuery
                   query={graphql`
-                    query HeadingQuery {
-                      file(relativePath: { eq: "hero.png" }) {
+                    query HomeEtheriumQuery {
+                      file(relativePath: { eq: "etherium-illustration.png" }) {
                         childImageSharp {
                           fluid {
                             ...GatsbyImageSharpFluid
@@ -65,20 +40,34 @@ const HomeHero: React.FC<IProps> = ({
                   render={(data: any) => (
                     <Img
                       className={styles.heroImage}
+                      style={{
+                        transform: "translateY(33px)"
+                      }}
                       fluid={data.file.childImageSharp.fluid}
                       alt="Hero illustration"
                     />
                   )}
                 />
               </div>
+              <div className={`column is-6 ${styles.heroColumn}`}>
+                <div className={styles.heroHeading}>{heading}</div>
+
+                <div className={styles.heroSubHeading}>
+                  <p>{subheading}</p>
+                </div>
+
+                <Button
+                  large
+                  withBackground
+                  label={buttonLabel}
+                  className={styles.button}
+                />
+              </div>
             </div>
           </div>
-          <div
-            className={`column is-9 is-offset-3 ${styles.gradientColumns}`}
-          ></div>
         </div>
       </section>
     </>
   );
 };
-export default HomeHero;
+export default HomeEtherium;
