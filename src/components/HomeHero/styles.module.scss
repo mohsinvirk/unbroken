@@ -1,5 +1,44 @@
 @import "../../styles/variables.scss";
 
 .homeHero {
-    background-color: $homeHeroBackgroundColor;
+  background-color: $homeHeroBackgroundColor;
+  padding: 45px 0 0;
+}
+
+.heroContent {
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+.heroColumn {
+  padding: 0;
+  margin: 0;
+}
+
+.heroHeading {
+  font-size: 84px;
+  font-family: $mabry;
+  font-weight: bold;
+  color: $heroTextColor;
+  line-height: 84px;
+  max-width: 500px;
+  padding-top: 30px;
+}
+
+.heroSubHeading {
+  color: $heroTextColor;
+  font-family: $gtamerica;
+  font-size: 20px;
+  margin: 10px auto;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.gradientColumns {
+  margin: 0;
+  padding: 0;
+  height: 150px;
+  background-image: url("../../images/Rectangle.png");
 }

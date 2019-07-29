@@ -12,7 +12,7 @@ export interface INavItems {
 interface IProps {
   lang: string;
   navItems: Array<INavItems>;
-  buttonLabel: string
+  buttonLabel: string;
 }
 
 const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
@@ -29,7 +29,7 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
   return (
     <>
       <nav
-        className="navbar is-transparent is-fixed-top container"
+        className="navbar is-transparent container"
         role="navigation"
         aria-label="main navigation"
       >
@@ -62,9 +62,12 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
         >
           <div className="navbar-end">
             {navbarLinks}
-            <div className="navbar-item">
-              <Button className={styles.button} medium withBackground label={buttonLabel} />
-            </div>
+            <Button
+              className={styles.button}
+              medium
+              withBackground
+              label={buttonLabel}
+            />
           </div>
         </div>
       </nav>

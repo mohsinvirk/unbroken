@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../layouts/en";
 
 import HomeHero from "../components/HomeHero/HomeHero";
@@ -25,7 +26,14 @@ const navItems = [
 const IndexPage = props => (
   <Layout location={props.location} {...props}>
     <>
-      <HomeHero lang="en" navItems={navItems}/>
+      <HomeHero
+        lang="en"
+        navItems={navItems}
+        heading="Ethereum exchange made simple"
+        subheading1="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+        subheading2="Aenean commodo ligula eget dolor."
+        buttonLabel="Get started"
+      />
     </>
   </Layout>
 );
