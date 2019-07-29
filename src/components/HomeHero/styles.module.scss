@@ -15,6 +15,14 @@
   margin: 0;
 }
 
+.heroImage {
+  transform: translateY(33px);
+
+  @include desktopAndAbove {
+    min-height: 455px;
+  }
+}
+
 .heroHeading {
   font-size: 84px;
   font-family: $mabry;

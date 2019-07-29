@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.heading {
+  font-family: $gtamerica;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #191919;
+}
+
+.subheading {
+  font-size: 20px;
+  line-height: 26px;
+  color: #191919;
+  opacity: 0.37;
+  margin-top: 5px;
+}
+
+.icon {
+  height: 55px;
+  width: 55px;
+  margin: 10px 0;
+}
+
+.features {
+  padding: 50px 0;
+}

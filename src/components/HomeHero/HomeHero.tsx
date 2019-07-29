@@ -16,7 +16,7 @@ interface IProps {
   buttonLabel: string;
 }
 
-const Header: React.FC<IProps> = ({
+const HomeHero: React.FC<IProps> = ({
   lang,
   navItems,
   heading,
@@ -63,7 +63,7 @@ const Header: React.FC<IProps> = ({
                     }
                   `}
                   render={(data: any) => (
-                    <Img
+                    <Img className={styles.heroImage}
                       style={{
                         transform: "translateY(33px)"
                       }}
@@ -83,4 +83,4 @@ const Header: React.FC<IProps> = ({
     </>
   );
 };
-export default Header;
+export default HomeHero;
