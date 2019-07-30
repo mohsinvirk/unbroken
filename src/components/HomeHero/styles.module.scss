@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 .homeHero {
-  background-color: $homeHeroBackgroundColor;
+  background-color: $lightBlue;
   padding: 45px 0 0;
 }
 
@@ -27,14 +27,14 @@
   font-size: 84px;
   font-family: $mabry;
   font-weight: bold;
-  color: $heroTextColor;
+  color: $black;
   line-height: 84px;
   max-width: 500px;
   padding-top: 30px;
 }
 
 .heroSubHeading {
-  color: $heroTextColor;
+  color: $black;
   font-family: $gtamerica;
   font-size: 20px;
   margin: 10px auto;

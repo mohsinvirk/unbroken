@@ -17,8 +17,8 @@
 }
 
 .withBackground {
-  background-color: $buttonOrangeColor;
-  color: $buttonWhiteTextColor;
+  background-color: $orange;
+  color: $white;
 
   &:focus-within {
     outline: none;
@@ -27,12 +27,12 @@
 
 .withoutBackground {
   background-color: transparent;
-  color: $buttonBlackColor;
-  border: 1px solid $buttonBlackColor;
+  color: $black;
+  border: 1px solid $black;
 
   &:hover {
-    background-color: $buttonOrangeColor;
-    color: $buttonWhiteTextColor;
+    background-color: $orange;
+    color: $white;
     border: 1px solid transparent;
   }
 }
@@ -46,6 +46,7 @@
 }
 
 .fullWidth {
+  padding: 16px 90px;
   display: block;
   width: 100%;
 }

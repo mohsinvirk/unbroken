@@ -81,7 +81,7 @@ const HomeFeatures: React.FC<IProps> = ({
 
                 <HomeFeatureItem
                   heading={exchangeHeading}
-                  subheading={ethereumSubHeading}
+                  subheading={exchangeSubHeading}
                 >
                   <Img
                     fluid={data.exchange.childImageSharp.fluid}

@@ -18,3 +18,11 @@ declare module "react-intl/locale-data/pt";
 declare module "intl/locale-data/jsonp/pt";
 
 declare module "react-helmet";
+
+declare module "*.svg";
+declare module "*.svg?include";
+declare module "*.svg?webp";
+declare module "*.svg?inline";
+declare module "*.svg?url";
+declare module "*.svg?original";
+declare module "*.svg?sprite";

@@ -74,7 +74,7 @@ const HomeHero: React.FC<IProps> = ({
             </div>
           </div>
           <div
-            className={`column is-9 is-offset-3 ${styles.gradientColumns}`}
+            className={`column is-8 is-offset-4 ${styles.gradientColumns}`}
           ></div>
         </div>
       </section>

@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+
+.heading {
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 38px;
+  color: $black;
+}
+
+.subheading {
+  font-family: $gtamerica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #191919;
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+.icon {
+  height: 340px;
+  width: 320px;
+  margin: 10px 0;
+}
+
+.count {
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 65px;
+  color: $black;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $black;
+}
+
+.stepsCount {
+  display: flex;
+}
+
+.steps {
+  background-color: $lightOrange;
+  padding: 150px 0;
+}
+
+.column {
+  padding-right: 4em;
+}
