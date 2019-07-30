@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  background-color: $black;
+  padding: 70px 0 80px;
+}
+
+.itemsHeading {
+  color: $white;
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.link {
+  font-family: $gtamerica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
