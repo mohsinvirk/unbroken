@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.why {
+  background: $white;
+  padding-bottom: 100px;
+}
+
+.heading {
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 54px;
+  color: $black;
+  margin: 230px 0 100px;
+}
+
+.whyItemSubHeading {
+    color: $black;
+  font-family: $gtamerica;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.whyItemHeading {
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+  color: $black;
+}
+
+.whyItem {
+  padding-right: 3rem;
+  margin: 15px 0;
+}

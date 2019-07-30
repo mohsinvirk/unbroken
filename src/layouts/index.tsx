@@ -44,7 +44,7 @@ const TemplateWrapper: React.FC<IProps> = ({
     <IntlProvider locale={langKey} messages={i18nMessages}>
       <div>
         <Helmet
-          title="Gatsby Default Starter"
+          title="Unbroken"
           meta={[
             { name: "description", content: "Sample" },
             { name: "keywords", content: "sample, something" }

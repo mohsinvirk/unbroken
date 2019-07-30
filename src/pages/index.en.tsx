@@ -6,6 +6,7 @@ import HomeHero from "../components/HomeHero/HomeHero";
 import HomeFeatures from "../components/HomeFeatures/HomeFeatures";
 import HomeEtherium from "../components/HomeEtherium/HomeEtherium";
 import HomeSteps from "../components/HomeSteps/HomeSteps";
+import HomeWhy from "../components/HomeWhy/HomeWhy";
 
 const navItems = [
   {
@@ -26,6 +27,28 @@ const navItems = [
   }
 ];
 
+const whyItems = [
+  {
+    heading: "Direct transfer",
+    subheading: "We do not hold your currency. It it  sended out immediately."
+  },
+  {
+    heading: "Real time",
+    subheading:
+      "shows real time statistics after purchase, you always know where your money is."
+  },
+  {
+    heading: "Best in class customer support",
+    subheading:
+      "is transparent and is getting regular security checks by 3rd party’s. "
+  },
+  {
+    heading: "Secure",
+    subheading:
+      "We are transparent  about our security and is getting regular security checks by 3rd party’s."
+  }
+];
+
 const IndexPage = props => (
   <Layout location={props.location} {...props}>
     <>
@@ -37,6 +60,7 @@ const IndexPage = props => (
         subheading2="Aenean commodo ligula eget dolor."
         buttonLabel="Get started"
       />
+
       <HomeFeatures
         ethereumHeading="Etherium"
         ethereumSubHeading="Buy with Euros"
@@ -51,6 +75,7 @@ const IndexPage = props => (
         subheading="Ethereum is a secure digital currency that is free to use for instant payments anywhere in the world. It is a new form of currency designed for the internet era."
         buttonLabel="More about Ethereum"
       />
+
       <HomeSteps
         signupHeading="Sign up"
         signupSubHeading="Register with your personal information, create an account and login to your personal page."
@@ -65,6 +90,8 @@ const IndexPage = props => (
         buyButtonLabel="More about buying"
         buyCount="03"
       />
+
+      <HomeWhy items={whyItems} heading="Why unbroken?" buttonLabel="Sign up" />
     </>
   </Layout>
 );

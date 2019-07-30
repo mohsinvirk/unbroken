@@ -5,6 +5,8 @@ import Button from "../Button/Button";
 
 import styles from "./styles.module.scss";
 
+import logo from "../../images/unbroken-logo-black.png";
+
 export interface INavItems {
   name: string;
   slug: string;
@@ -35,11 +37,7 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
       >
         <div className="navbar-brand">
           <Link className="navbar-item" to={`/${lang}/`}>
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              width="112"
-              height="28"
-            />
+            <img src={logo} width="112" height="28" />
           </Link>
 
           <a

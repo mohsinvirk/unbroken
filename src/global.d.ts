@@ -26,3 +26,11 @@ declare module "*.svg?inline";
 declare module "*.svg?url";
 declare module "*.svg?original";
 declare module "*.svg?sprite";
+
+declare module "*.png";
+declare module "*.png?include";
+declare module "*.png?webp";
+declare module "*.png?inline";
+declare module "*.png?url";
+declare module "*.png?original";
+declare module "*.png?sprite";
