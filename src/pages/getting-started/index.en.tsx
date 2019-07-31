@@ -9,6 +9,7 @@ import LearnMoreSubheading from "../../components/LearnMoreSubheading/LearnMoreS
 import LearnMoreImage from "../../components/LearnMoreImage/LearnMoreImage";
 import LearnMoreParaGraph from "../../components/LearnMoreParaGraph/LearnMoreParaGraph";
 import LearnMoreVideo from "../../components/LearnMoreVideo/LearnMoreVideo";
+import LearnMoreDownload from "../../components/LearnMoreDownload/LearnMoreDownload";
 
 const navItems = [
   {
@@ -27,6 +28,24 @@ const navItems = [
   {
     name: "Login",
     slug: "/login"
+  }
+];
+
+const downloadItem = [
+  {
+    downloadLink: "https://unbroken.io",
+    linkTitle: "Terms of Service",
+    optionalText: "Small discription (optional)"
+  },
+  {
+    downloadLink: "https://unbroken.io",
+    linkTitle: "Privacy statement",
+    optionalText: "Small discription (optional)"
+  },
+  {
+    downloadLink: "https://unbroken.io",
+    linkTitle: "Terms of service",
+    optionalText: "Small discription (optional)"
   }
 ];
 
@@ -73,6 +92,11 @@ const IndexPage = props => (
             <LearnMoreVideo>
               <div className={styles.imageContainer}>Inline Video block</div>
             </LearnMoreVideo>
+
+            <LearnMoreDownload
+              heading="Downloads"
+              downloadItems={downloadItem}
+            />
           </div>
         </div>
       </div>
