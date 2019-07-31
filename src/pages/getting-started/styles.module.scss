@@ -1,1 +1,18 @@
-@import "../../styles/brakepoints.scss";
+@import "../../styles/variables.scss";
+
+
+.imageContainer{
+    background-color: $darkBlue;
+    height: 420px;
+    width: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $gtamerica;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    color: $white;
+    margin: 20px 0;
+}

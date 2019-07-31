@@ -2,8 +2,11 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../layouts/en";
 
+import styles from "./styles.module.scss";
+
 import LearnMoreHero from "../../components/LearnMoreItemHeader/LearnMoreItemHeader";
 import LearnMoreSubheading from "../../components/LearnMoreSubheading/LearnMoreSubheading";
+import LearnMoreImage from "../../components/LearnMoreImage/LearnMoreImage"
 
 const navItems = [
   {
@@ -45,6 +48,10 @@ const IndexPage = props => (
             Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
             aliquet nec, vulputate eget, arcu. In enim"
             />
+
+            <LearnMoreImage>
+                <div className={styles.imageContainer}>Inline Image block</div>
+            </LearnMoreImage>
           </div>
         </div>
       </div>
