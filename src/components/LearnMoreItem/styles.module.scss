@@ -1,0 +1,66 @@
+@import "../../styles/variables.scss";
+
+.circleWithCount {
+  background: #fcf4f1;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  margin-right: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count {
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 76px;
+  line-height: 83px;
+  color: $black;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $black;
+}
+
+.heading {
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 38px;
+  color: $black;
+}
+
+.text {
+  font-family: $gtamerica;
+  font-size: 16px;
+  line-height: 30px;
+  color: $black;
+  margin: 10px auto;
+}
+
+.link {
+  font-family: $gtamerica;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: $black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 109px;
+}
+
+.item {
+  padding: 55px 0;
+  display: flex;
+}
+
+.content {
+  margin-top: 5px;
+  max-width: 290px;
+}
+
+.learMoreItem {
+  margin: 80px 0;
+}

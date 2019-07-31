@@ -10,7 +10,7 @@ interface IProps {
   heading: string;
 }
 
-const HomeHero: React.FC<IProps> = ({ lang, navItems, heading }) => {
+const LeranMoreHero: React.FC<IProps> = ({ lang, navItems, heading }) => {
   return (
     <>
       <section className={styles.header}>
@@ -26,4 +26,4 @@ const HomeHero: React.FC<IProps> = ({ lang, navItems, heading }) => {
     </>
   );
 };
-export default HomeHero;
+export default LeranMoreHero;

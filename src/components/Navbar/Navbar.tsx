@@ -10,6 +10,7 @@ import logo from "../../images/unbroken-logo-black.png";
 export interface INavItems {
   name: string;
   slug: string;
+  isActive?: boolean;
 }
 interface IProps {
   lang: string;
@@ -22,7 +23,11 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
 
   const navbarLinks = navItems.map((item, index) => (
     <div className={`navbar-item ${styles.navbarItem}`} key={index}>
-      <Link to={`/${lang}/${item.slug}`} className={styles.navbarItemLink}>
+      <Link
+        to={`/${lang}/${item.slug}`}
+        className={`${styles.navbarItemLink}  ${item.isActive &&
+          styles.isActive}`}
+      >
         {item.name}
       </Link>
     </div>
