@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.header {
+  background-color: $lightOrange;
+  padding: 45px 0 65px;
+}
+.heading {
+    font-family: $mabry;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 71px;
+    color: $black;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  margin: 80px 0 20px;
+}
+
+.backtext {
+  color: $black;
+  font-weight: bold;
+  margin-left: 5px;
+  display: inline-flex;
+}
+
+.headerContent {
+  padding: 2em;
+}
+
+.headerCount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.count {
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 65px;
+  color: $black;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $black;
+}
