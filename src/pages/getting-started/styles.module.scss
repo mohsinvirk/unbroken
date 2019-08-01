@@ -1,18 +1,27 @@
 @import "../../styles/variables.scss";
 
+.imageContainer {
+  background-color: $darkBlue;
+  height: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $gtamerica;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+  color: $white;
+  margin: 20px 0;
 
-.imageContainer{
-    background-color: $darkBlue;
-    height: 420px;
-    width: 680px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: $gtamerica;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 39px;
-    text-align: center;
-    color: $white;
-    margin: 20px 0;
+  @include mobileonly {
+    height: 200px;
+  }
+}
+
+.container {
+  @include mobileonly {
+    padding: 1em;
+  }
 }

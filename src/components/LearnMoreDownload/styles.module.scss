@@ -31,6 +31,10 @@
   line-height: 30px;
   color: $black;
   margin-right: 10px;
+
+  @include mobileonly {
+    font-size: 16px;
+  }
 }
 
 .optionalText {
@@ -38,6 +42,10 @@
   font-size: 18px;
   line-height: 30px;
   color: $black;
+
+  @include mobileonly {
+    font-size: 16px;
+  }
 }
 
 .heading {

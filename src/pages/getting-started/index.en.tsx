@@ -11,6 +11,7 @@ import LearnMoreParaGraph from "../../components/LearnMoreParaGraph/LearnMorePar
 import LearnMoreVideo from "../../components/LearnMoreVideo/LearnMoreVideo";
 import LearnMoreDownload from "../../components/LearnMoreDownload/LearnMoreDownload";
 import FAQ from "../../components/LearnMoreFAQ/FAQ";
+import LearnMoreHelp from "../../components/LearnMoreHelp/LearnMoreHelp";
 
 const navItems = [
   {
@@ -58,14 +59,12 @@ const faqItems = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in ante id risus mollis mollis. Quisque fringilla sed augue nec lobortis. Nam aliquet, tortor tempor congue euismod, est purus viverra massa, vel consectetur justo libero non felis. Nam in ornare nisl. Nunc nec rutrum tortor. Phasellus maximus, sem nec sagittis hendrerit, lectus nibh venenatis ex, at malesuada metus est in metus. Nunc ac scelerisque libero, in aliquam felis. In tempor nec arcu vel eleifend. Integer condimentum malesuada turpis viverra dictum. In ac sagittis tortor, vel sodales erat. Mauris ornare diam dolor, sed cursus orci egestas et. In quis elit dolor. Nulla eleifend nisl tincidunt libero laoreet ultricies."
   },
   {
-    title:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in ante id risus mollis mollis. Quisque fringilla sed augue nec lobortis. Nam aliquet, tortor tempor congue euismod, est purus viverra massa, vel consectetur justo libero non felis. Nam in ornare nisl. Nunc nec rutrum tortor. Phasellus maximus, sem nec sagittis hendrerit, lectus nibh venenatis ex, at malesuada metus est in metus. Nunc ac scelerisque libero, in aliquam felis. In tempor nec arcu vel eleifend. Integer condimentum malesuada turpis viverra dictum. In ac sagittis tortor, vel sodales erat. Mauris ornare diam dolor, sed cursus orci egestas et. In quis elit dolor. Nulla eleifend nisl tincidunt libero laoreet ultricies."
   },
   {
-    title:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in ante id risus mollis mollis. Quisque fringilla sed augue nec lobortis. Nam aliquet, tortor tempor congue euismod, est purus viverra massa, vel consectetur justo libero non felis. Nam in ornare nisl. Nunc nec rutrum tortor. Phasellus maximus, sem nec sagittis hendrerit, lectus nibh venenatis ex, at malesuada metus est in metus. Nunc ac scelerisque libero, in aliquam felis. In tempor nec arcu vel eleifend. Integer condimentum malesuada turpis viverra dictum. In ac sagittis tortor, vel sodales erat. Mauris ornare diam dolor, sed cursus orci egestas et. In quis elit dolor. Nulla eleifend nisl tincidunt libero laoreet ultricies."
   }
@@ -80,7 +79,7 @@ const IndexPage = props => (
         heading="Learn more about exchanging euro’s"
       />
 
-      <div className="container">
+      <div className={`container ${styles.container}`}>
         <div className="columns">
           <div className="column is-offset-4 is-6">
             <LearnMoreSubheading
@@ -121,6 +120,8 @@ const IndexPage = props => (
             />
 
             <FAQ heading="F. A. Q" faqItems={faqItems} />
+
+            <LearnMoreHelp heading="How can we help?" />
           </div>
         </div>
       </div>

@@ -20,8 +20,8 @@ const LearnMoreDownload: React.FC<IProps> = ({ heading, downloadItems }) => {
     <div className={styles.downlaod}>
       <h3 className={styles.heading}>{heading}</h3>
       <hr />
-      {downloadItems.map(({downloadLink, linkTitle, optionalText }, index) => (
-        <>
+      {downloadItems.map(({ downloadLink, linkTitle, optionalText }, index) => (
+        <div key={index}>
           <div className={styles.item}>
             <span className={styles.icon}>
               <img src={download} />
@@ -29,12 +29,10 @@ const LearnMoreDownload: React.FC<IProps> = ({ heading, downloadItems }) => {
             <a href={downloadLink} className={styles.link}>
               {linkTitle}
             </a>
-            <span className={styles.optionalText}>
-              — {optionalText}
-            </span>
+            <span className={styles.optionalText}>— {optionalText}</span>
           </div>
           <hr />
-        </>
+        </div>
       ))}
     </div>
   );

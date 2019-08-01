@@ -21,10 +21,7 @@ const FAQ: React.FC<IProps> = ({ heading, faqItems }) => {
       <hr />
 
       {faqItems.map(({ title, text }, index) => (
-        <FAQItem
-          title={title}
-          text={text}
-        />
+        <FAQItem key={index} title={title} text={text} />
       ))}
     </div>
   );
