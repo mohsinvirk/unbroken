@@ -10,6 +10,7 @@ import LearnMoreImage from "../../components/LearnMoreImage/LearnMoreImage";
 import LearnMoreParaGraph from "../../components/LearnMoreParaGraph/LearnMoreParaGraph";
 import LearnMoreVideo from "../../components/LearnMoreVideo/LearnMoreVideo";
 import LearnMoreDownload from "../../components/LearnMoreDownload/LearnMoreDownload";
+import FAQ from "../../components/LearnMoreFAQ/FAQ";
 
 const navItems = [
   {
@@ -46,6 +47,27 @@ const downloadItem = [
     downloadLink: "https://unbroken.io",
     linkTitle: "Terms of service",
     optionalText: "Small discription (optional)"
+  }
+];
+
+const faqItems = [
+  {
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in ante id risus mollis mollis. Quisque fringilla sed augue nec lobortis.",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in ante id risus mollis mollis. Quisque fringilla sed augue nec lobortis. Nam aliquet, tortor tempor congue euismod, est purus viverra massa, vel consectetur justo libero non felis. Nam in ornare nisl. Nunc nec rutrum tortor. Phasellus maximus, sem nec sagittis hendrerit, lectus nibh venenatis ex, at malesuada metus est in metus. Nunc ac scelerisque libero, in aliquam felis. In tempor nec arcu vel eleifend. Integer condimentum malesuada turpis viverra dictum. In ac sagittis tortor, vel sodales erat. Mauris ornare diam dolor, sed cursus orci egestas et. In quis elit dolor. Nulla eleifend nisl tincidunt libero laoreet ultricies."
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in ante id risus mollis mollis. Quisque fringilla sed augue nec lobortis. Nam aliquet, tortor tempor congue euismod, est purus viverra massa, vel consectetur justo libero non felis. Nam in ornare nisl. Nunc nec rutrum tortor. Phasellus maximus, sem nec sagittis hendrerit, lectus nibh venenatis ex, at malesuada metus est in metus. Nunc ac scelerisque libero, in aliquam felis. In tempor nec arcu vel eleifend. Integer condimentum malesuada turpis viverra dictum. In ac sagittis tortor, vel sodales erat. Mauris ornare diam dolor, sed cursus orci egestas et. In quis elit dolor. Nulla eleifend nisl tincidunt libero laoreet ultricies."
+  },
+  {
+    title:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in ante id risus mollis mollis. Quisque fringilla sed augue nec lobortis. Nam aliquet, tortor tempor congue euismod, est purus viverra massa, vel consectetur justo libero non felis. Nam in ornare nisl. Nunc nec rutrum tortor. Phasellus maximus, sem nec sagittis hendrerit, lectus nibh venenatis ex, at malesuada metus est in metus. Nunc ac scelerisque libero, in aliquam felis. In tempor nec arcu vel eleifend. Integer condimentum malesuada turpis viverra dictum. In ac sagittis tortor, vel sodales erat. Mauris ornare diam dolor, sed cursus orci egestas et. In quis elit dolor. Nulla eleifend nisl tincidunt libero laoreet ultricies."
   }
 ];
 
@@ -97,6 +119,8 @@ const IndexPage = props => (
               heading="Downloads"
               downloadItems={downloadItem}
             />
+
+            <FAQ heading="F. A. Q" faqItems={faqItems} />
           </div>
         </div>
       </div>

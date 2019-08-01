@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+.titleText {
+  font-family: $gtamerica;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: $black;
+}
+
+.open {
+  color: $orange;
+}
+
+.text {
+  font-family: $gtamerica;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 20px;
+  color: $black;
+}
+
+.downlaod {
+  padding: 40px 0;
+}
+
+.icon {
+  margin-left: 15px;
+}
+
+.heading {
+  font-family: $mabry;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 26px;
+  color: $black;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
