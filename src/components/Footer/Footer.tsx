@@ -21,8 +21,8 @@ const Footer: React.FC<IProps> = ({ lang, footerItems }) => {
   return (
     <section className={`${styles.footer}`}>
       <div className="container">
-        <div className="columns">
-          <div className="column is-half">
+        <div className="columns is-mobile is-multiline">
+          <div className="column is-half-desktop is-full-mobile">
             <Link to={`/${lang}/`}>
               <img src={logo} width="112" height="28" />
             </Link>

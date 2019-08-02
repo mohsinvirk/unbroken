@@ -17,4 +17,10 @@
   padding-top: 70px;
   max-width: 600px;
 
+  @include mobileonly {
+    font-size: 40px;
+    line-height: 45px;
+    padding-top: 40px;
+  }
+
 }
