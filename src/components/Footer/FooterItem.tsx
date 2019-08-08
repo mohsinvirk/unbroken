@@ -16,7 +16,7 @@ interface IProps {
 
 const FooterItem: React.FC<IProps> = ({ heading, links, lang }) => {
   return (
-    <div className="column is-mobile-half">
+    <div className={`column is-mobile-half ${styles.footerItem}`}>
       <h3 className={styles.itemsHeading}>{heading}</h3>
 
       <div className={styles.links}>

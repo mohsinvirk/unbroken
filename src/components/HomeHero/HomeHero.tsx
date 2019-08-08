@@ -37,8 +37,8 @@ const HomeHero: React.FC<IProps> = ({
                 <div className={styles.heroHeading}>{heading}</div>
 
                 <div className={styles.heroSubHeading}>
-                  <p>{subheading1}</p>
-                  <p>{subheading2}</p>
+                  <p>{subheading1}{" "}{subheading2}</p>
+                  <p></p>
                 </div>
 
                 <Button
@@ -63,18 +63,23 @@ const HomeHero: React.FC<IProps> = ({
                     }
                   `}
                   render={(data: any) => (
-                    <Img
-                      className={styles.heroImage}
-                      fluid={data.file.childImageSharp.fluid}
-                      alt="Hero illustration"
-                    />
+                    <>
+                      <Img
+                        className={styles.heroImage}
+                        fluid={data.file.childImageSharp.fluid}
+                        alt="Hero illustration"
+                      />
+                      <div
+                        className={`column is-hidden-tablet ${styles.gradientColumns}`}
+                      ></div>
+                    </>
                   )}
                 />
               </div>
             </div>
           </div>
           <div
-            className={`column is-8 is-offset-4 ${styles.gradientColumns}`}
+            className={`column is-8 is-offset-4 is-hidden-mobile${styles.gradientColumns}`}
           ></div>
         </div>
       </section>

@@ -41,8 +41,17 @@
 .steps {
   background-color: $lightOrange;
   padding: 150px 0;
+
+  @include mobileonly {
+    padding: 50px 15px;
+  }
 }
 
 .column {
   padding-right: 4em;
+
+  @include mobileonly {
+    margin-bottom: 70px;
+    padding-right: 1em;
+  }
 }

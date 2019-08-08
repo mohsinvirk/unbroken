@@ -24,31 +24,55 @@ const HomeEtherium: React.FC<IProps> = ({
         <div>
           <div className="">
             <div className={`columns ${styles.heroContent}`}>
-              <div className={`column is-6 ${styles.imageColumn}`}>
-                <StaticQuery
-                  query={graphql`
-                    query HomeEtheriumQuery {
-                      file(relativePath: { eq: "etherium-illustration.png" }) {
-                        childImageSharp {
-                          fluid {
-                            ...GatsbyImageSharpFluid
-                          }
+              <StaticQuery
+                query={graphql`
+                  query HomeEtheriumQuery {
+                    fluid: file(
+                      relativePath: { eq: "etherium-illustration.png" }
+                    ) {
+                      childImageSharp {
+                        fluid {
+                          ...GatsbyImageSharpFluid
                         }
                       }
                     }
-                  `}
-                  render={(data: any) => (
-                    <Img
-                      className={styles.heroImage}
-                      style={{
-                        transform: "translateY(33px)"
-                      }}
-                      fluid={data.file.childImageSharp.fluid}
-                      alt="Hero illustration"
-                    />
-                  )}
-                />
-              </div>
+                    fixed: file(
+                      relativePath: { eq: "etherium-illustration-mobile.png" }
+                    ) {
+                      childImageSharp {
+                        fixed(height: 480) {
+                          ...GatsbyImageSharpFixed
+                        }
+                      }
+                    }
+                  }
+                `}
+                render={(data: any) => (
+                  <>
+                    <div className={`column is-6 is-hidden-mobile ${styles.imageColumn}`}>
+                      <Img
+                        className={styles.heroImage}
+                        style={{
+                          transform: "translateY(33px)"
+                        }}
+                        fluid={data.fluid.childImageSharp.fluid}
+                        alt="Etherium illustration"
+                      />
+                    </div>
+
+                    <div className={`column is-6 is-hidden-tablet ${styles.imageColumn}`}>
+                      <Img
+                        className={styles.heroImage}
+                        style={{
+                          transform: "translateY(33px)"
+                        }}
+                        fixed={data.fixed.childImageSharp.fixed}
+                        alt="Etherium illustration"
+                      />
+                    </div>
+                  </>
+                )}
+              />
               <div className={`column is-6 ${styles.heroColumn}`}>
                 <div className={styles.heroHeading}>{heading}</div>
 

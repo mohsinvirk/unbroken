@@ -40,3 +40,9 @@
   flex-direction: column;
   margin-top: 25px;
 }
+
+.footerItem {
+  @include mobileonly {
+    flex: 1 1 50% !important;
+  }
+}

@@ -40,7 +40,7 @@ const HomeSteps: React.FC<IProps> = ({
   return (
     <div className={styles.steps}>
       <div className="container">
-        <div className="columns">
+        <div className="columns is-multiline">
           <StaticQuery
             query={graphql`
               query EthQuery {
@@ -68,7 +68,6 @@ const HomeSteps: React.FC<IProps> = ({
               }
             `}
             render={data => {
-              console.log(data);
               return (
                 <>
                   <HomeFeatureItem

@@ -1,5 +1,25 @@
 @import "../../styles/variables.scss";
 
+.columns {
+  @include mobileonly {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.column {
+  @include mobileonly {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      border-bottom: 1px solid #e3dfda;
+      margin: 0 20px;
+    }
+  }
+}
+
 .heading {
   font-family: $gtamerica;
   font-size: 20px;
@@ -24,4 +44,8 @@
 
 .features {
   padding: 50px 0;
+
+  @include mobileonly {
+    padding: 35px 0 50px;
+  }
 }

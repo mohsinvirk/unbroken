@@ -14,7 +14,7 @@ const HomeFeatureItem: React.FC<IProps> = ({
   subheading
 }) => {
   return (
-    <div className="column">
+    <div className={`column ${styles.column}`}>
       <div>
         <div className={styles.icon}>{children}</div>
       </div>

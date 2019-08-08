@@ -27,7 +27,7 @@ const HomeFeatures: React.FC<IProps> = ({
 }) => {
   return (
     <div className={`container ${styles.features}`}>
-      <div className="columns">
+      <div className={`columns ${styles.columns}`}>
         <StaticQuery
           query={graphql`
             query EthereumQuery {

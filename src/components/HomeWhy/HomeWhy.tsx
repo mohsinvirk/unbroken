@@ -23,28 +23,44 @@ const HomeWhy: React.FC<IProps> = ({ items, heading, buttonLabel }) => {
     <section className={styles.why}>
       <div className="container">
         <div className="columns is-gapless">
-          <div className="column">
-            <StaticQuery
-              query={graphql`
-                query WhyUnbrokenQuery {
-                  file(relativePath: { eq: "why-unbroken.png" }) {
-                    childImageSharp {
-                      fixed {
-                        ...GatsbyImageSharpFixed
-                      }
+          <StaticQuery
+            query={graphql`
+              query WhyUnbrokenQuery {
+                fixed: file(relativePath: { eq: "why-unbroken.png" }) {
+                  childImageSharp {
+                    fixed {
+                      ...GatsbyImageSharpFixed
                     }
                   }
                 }
-              `}
-              render={(data: any) => (
-                <Img
-                  className={styles.image}
-                  fixed={data.file.childImageSharp.fixed}
-                  alt="Hero illustration"
-                />
-              )}
-            />
-          </div>
+                fluid: file(relativePath: { eq: "why-unbroken.png" }) {
+                  childImageSharp {
+                    fixed(height: 420) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
+              }
+            `}
+            render={(data: any) => (
+              <>
+                <div className="column is-hidden-mobile">
+                  <Img
+                    className={styles.image}
+                    fixed={data.fixed.childImageSharp.fixed}
+                    alt="Why illustration"
+                  />
+                </div>
+                <div className={`column is-hidden-tablet is-vcentered ${styles.mobileImage}`}>
+                  <Img
+                    className={styles.image}
+                    fixed={data.fluid.childImageSharp.fixed}
+                    alt="Why illustration"
+                  />
+                </div>
+              </>
+            )}
+          />
           <div className="column">
             <h1 className={styles.heading}>{heading}</h1>
             <div className="columns is-multiline">
@@ -55,7 +71,7 @@ const HomeWhy: React.FC<IProps> = ({ items, heading, buttonLabel }) => {
                   subheading={subheading}
                 />
               ))}
-              <Button large withBackground label={buttonLabel} />
+              <Button large withBackground label={buttonLabel} className={styles.button} />
             </div>
           </div>
         </div>
