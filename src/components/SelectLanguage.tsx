@@ -1,7 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Link from "gatsby-link";
-import { FormattedMessage } from "react-intl";
 
 export interface ILangs {
   link: string;
@@ -27,16 +25,9 @@ const SelectLanguage: React.FC<IProps> = ({ langs }) => {
   ));
 
   return (
-    <section>
-      <header
-        style={{
-          color: "white"
-        }}
-      >
-        <FormattedMessage id="selectLanguage" />
-      </header>
+    <div>
       <ul>{links}</ul>
-    </section>
+    </div>
   );
 };
 

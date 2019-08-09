@@ -54,9 +54,6 @@ const HomeEtherium: React.FC<IProps> = ({
                     >
                       <Img
                         className={styles.heroImage}
-                        style={{
-                          transform: "translateY(33px)"
-                        }}
                         fluid={data.fluid.childImageSharp.fluid}
                         alt="Etherium illustration"
                       />
@@ -67,9 +64,6 @@ const HomeEtherium: React.FC<IProps> = ({
                     >
                       <Img
                         className={styles.heroImage}
-                        style={{
-                          transform: "translateY(33px)"
-                        }}
                         fixed={data.fixed.childImageSharp.fixed}
                         alt="Etherium illustration"
                       />
