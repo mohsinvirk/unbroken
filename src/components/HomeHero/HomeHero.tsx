@@ -43,7 +43,9 @@ const HomeHero: React.FC<IProps> = ({
         <div>
           <div className="container">
             <div className={`columns ${styles.heroContent}`}>
-              <div className={`column ${styles.heroColumn} ${styles.heroColumnContent}`}>
+              <div
+                className={`column ${styles.heroColumn} ${styles.heroColumnContent}`}
+              >
                 <div className={styles.heroHeading}>{heading}</div>
 
                 <div className={styles.heroSubHeading}>

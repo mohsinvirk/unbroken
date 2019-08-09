@@ -14,8 +14,7 @@ interface IProps {
 }
 
 const Header: React.FC<IProps> = props => (
-  <div
-  >
+  <div>
     <div
       style={{
         margin: "0 auto",

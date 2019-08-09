@@ -26,8 +26,8 @@ const Button: React.FC<IProps> = ({
 }) => {
   return (
     <button
-      className={`${styles.button} ${large && styles.large} ${fullWidth && styles.fullWidth} ${medium &&
-        styles.medium} ${withBackground &&
+      className={`${styles.button} ${large && styles.large} ${fullWidth &&
+        styles.fullWidth} ${medium && styles.medium} ${withBackground &&
         styles.withBackground} ${withoutBackground &&
         styles.withoutBackground} ${className}`}
     >

@@ -1,11 +1,10 @@
 import React from "react";
 
-import Button from "../Button/Button"
+import Button from "../Button/Button";
 
 import styles from "./styles.module.scss";
 
 import icon from "../../images/icon.svg";
-
 
 interface IProps {
   count?: string;
@@ -36,7 +35,7 @@ const HomeStepsItem: React.FC<IProps> = ({
 
       <div className={styles.subheading}>{subheading}</div>
 
-      <Button label={buttonLabel} fullWidth withoutBackground/>
+      <Button label={buttonLabel} fullWidth withoutBackground />
     </div>
   );
 };

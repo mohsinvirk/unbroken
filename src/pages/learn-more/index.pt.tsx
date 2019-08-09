@@ -23,8 +23,6 @@ const navItems = [
   }
 ];
 
-
-
 const IndexPage = props => (
   <Layout location={props.location} {...props}>
     <>
@@ -36,7 +34,6 @@ const IndexPage = props => (
         subheading2="Aenean commodo ligula eget dolor."
         buttonLabel="Get started"
       />
-
     </>
   </Layout>
 );

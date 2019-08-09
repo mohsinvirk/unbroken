@@ -9,6 +9,4 @@ import "intl/locale-data/jsonp/en";
 
 addLocaleData(en);
 
-export default (props) => (
-  <Layout {...props} i18nMessages={messages} lang="en" />
-);
+export default props => <Layout {...props} i18nMessages={messages} lang="en" />;
