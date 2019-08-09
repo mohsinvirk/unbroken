@@ -25,6 +25,32 @@ const navItems = [
   }
 ];
 
+const navArrowItems = [
+  {
+    name: "Sign up",
+    slug: "/sign-up"
+  },
+  {
+    name: "Learn more",
+    slug: "/learn-more"
+  },
+  {
+    name: "Support",
+    slug: "/support"
+  }
+];
+
+const navChevronItems = [
+  {
+    name: "Contact",
+    slug: "/contact"
+  },
+  {
+    name: "About us",
+    slug: "/about-us"
+  }
+];
+
 const readMoreItems = [
   {
     count: "01",
@@ -88,6 +114,8 @@ const IndexPage = props => (
       <LearnMoreHero
         lang="en"
         navItems={navItems}
+        navArrowItems={navArrowItems}
+        navChevronItems={navChevronItems}
         heading="Learn more about exchanging euro’s"
       />
       <LearnMoreItems lang="en" items={readMoreItems} />

@@ -34,7 +34,7 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
   ));
 
   return (
-    <>
+    <div className="is-hidden-touch">
       <nav
         className="navbar is-transparent container"
         role="navigation"
@@ -74,7 +74,7 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 export default Header;

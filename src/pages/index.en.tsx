@@ -27,6 +27,32 @@ const navItems = [
   }
 ];
 
+const navArrowItems = [
+  {
+    name: "Sign up",
+    slug: "/sign-up"
+  },
+  {
+    name: "Learn more",
+    slug: "/learn-more"
+  },
+  {
+    name: "Support",
+    slug: "/support"
+  }
+];
+
+const navChevronItems = [
+  {
+    name: "Contact",
+    slug: "/contact"
+  },
+  {
+    name: "About us",
+    slug: "/about-us"
+  }
+];
+
 const whyItems = [
   {
     heading: "Direct transfer",
@@ -55,6 +81,8 @@ const IndexPage = props => (
       <HomeHero
         lang="en"
         navItems={navItems}
+        navArrowItems={navArrowItems}
+        navChevronItems={navChevronItems}
         heading="Ethereum exchange made simple"
         subheading1="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
         subheading2="Aenean commodo ligula eget dolor."

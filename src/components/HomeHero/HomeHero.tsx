@@ -3,6 +3,7 @@ import { StaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
 import Navbar, { INavItems } from "../Navbar/Navbar";
+import MobileNav from "../MobileNav/MobileNav";
 import Button from "../Button/Button";
 
 import styles from "./styles.module.scss";
@@ -10,6 +11,8 @@ import styles from "./styles.module.scss";
 interface IProps {
   lang: string;
   navItems: Array<INavItems>;
+  navArrowItems: Array<INavItems>;
+  navChevronItems: Array<INavItems>;
   heading: string;
   subheading1: string;
   subheading2: string;
@@ -22,23 +25,31 @@ const HomeHero: React.FC<IProps> = ({
   heading,
   subheading1,
   subheading2,
-  buttonLabel
+  buttonLabel,
+  navArrowItems,
+  navChevronItems
 }) => {
   return (
     <>
       <section className={`${styles.homeHero}`}>
         <div className="container">
           <Navbar lang={lang} navItems={navItems} buttonLabel="Sign up" />
+          <MobileNav
+            lang={lang}
+            navArrowItems={navArrowItems}
+            navChevronItems={navChevronItems}
+          />
         </div>
         <div>
           <div className="container">
             <div className={`columns ${styles.heroContent}`}>
-              <div className={`column ${styles.heroColumn}`}>
+              <div className={`column ${styles.heroColumn} ${styles.heroColumnContent}`}>
                 <div className={styles.heroHeading}>{heading}</div>
 
                 <div className={styles.heroSubHeading}>
-                  <p>{subheading1}{" "}{subheading2}</p>
-                  <p></p>
+                  <p>
+                    {subheading1} {subheading2}
+                  </p>
                 </div>
 
                 <Button
@@ -79,7 +90,7 @@ const HomeHero: React.FC<IProps> = ({
             </div>
           </div>
           <div
-            className={`column is-8 is-offset-4 is-hidden-mobile${styles.gradientColumns}`}
+            className={`column is-8 is-offset-4 is-hidden-mobile ${styles.gradientColumns}`}
           ></div>
         </div>
       </section>

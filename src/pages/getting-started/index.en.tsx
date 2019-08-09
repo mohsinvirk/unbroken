@@ -33,6 +33,32 @@ const navItems = [
   }
 ];
 
+const navArrowItems = [
+    {
+      name: "Sign up",
+      slug: "/sign-up"
+    },
+    {
+      name: "Learn more",
+      slug: "/learn-more"
+    },
+    {
+      name: "Support",
+      slug: "/support"
+    }
+  ];
+
+  const navChevronItems = [
+    {
+      name: "Contact",
+      slug: "/contact"
+    },
+    {
+      name: "About us",
+      slug: "/about-us"
+    }
+  ];
+
 const downloadItem = [
   {
     downloadLink: "https://unbroken.io",
@@ -74,6 +100,9 @@ const IndexPage = props => (
   <Layout location={props.location} {...props}>
     <>
       <LearnMoreHero
+        navArrowItems={navArrowItems}
+        navChevronItems={navChevronItems}
+        to="learn-more"
         lang="en"
         navItems={navItems}
         heading="Learn more about exchanging euro’s"

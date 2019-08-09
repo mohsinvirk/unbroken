@@ -49,7 +49,9 @@ const HomeEtherium: React.FC<IProps> = ({
                 `}
                 render={(data: any) => (
                   <>
-                    <div className={`column is-6 is-hidden-mobile ${styles.imageColumn}`}>
+                    <div
+                      className={`column is-6 is-hidden-mobile ${styles.imageColumn}`}
+                    >
                       <Img
                         className={styles.heroImage}
                         style={{
@@ -60,7 +62,9 @@ const HomeEtherium: React.FC<IProps> = ({
                       />
                     </div>
 
-                    <div className={`column is-6 is-hidden-tablet ${styles.imageColumn}`}>
+                    <div
+                      className={`column is-6 is-hidden-tablet ${styles.imageColumn}`}
+                    >
                       <Img
                         className={styles.heroImage}
                         style={{

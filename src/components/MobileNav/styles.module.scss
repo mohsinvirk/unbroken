@@ -1,0 +1,107 @@
+@import "../../styles/variables.scss";
+
+.navbar {
+  width: 100vw;
+  height: 100vh;
+  background-color: $darkBlue;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 999;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.burgerIcon {
+  margin-right: 15px;
+}
+.content {
+  min-width: 100%;
+}
+
+.columns {
+  padding: 20px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  align-items: center;
+}
+
+.SearchColumn {
+  padding: 5px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  align-items: center;
+}
+
+.chevronColumn {
+  padding: 5px 20px;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50px;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  height: 30px;
+  color: $white;
+
+  &::placeholder {
+    font-size: 22px;
+    line-height: 62px;
+    display: flex;
+    align-items: center;
+    color: rgba($white, 0.45);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbarItemLink {
+  font-family: $mabry;
+  font-weight: 500;
+  font-size: 22px;
+  color: $white;
+
+  &:hover {
+    border-bottom: 4px solid $orange;
+  }
+}
+
+.navbarItemChevron {
+  font-family: $mabry;
+  font-weight: 500;
+  font-size: 16px;
+  color: $white;
+
+  &:hover {
+    border-bottom: 4px solid $orange;
+  }
+}
+
+.isActive {
+  border-bottom: 4px solid $orange;
+}
+
+.navbarItem {
+  box-sizing: border-box;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.backtext {
+  color: $black;
+  font-weight: bold;
+  margin-left: 5px;
+  display: inline-flex;
+}

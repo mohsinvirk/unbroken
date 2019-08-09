@@ -3,7 +3,7 @@
 .why {
   background: $white;
   @include mobileonly {
-    padding: 15px 15px 100px;
+    padding: 0 15px 100px;
   }
 }
 

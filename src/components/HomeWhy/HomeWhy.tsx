@@ -51,7 +51,9 @@ const HomeWhy: React.FC<IProps> = ({ items, heading, buttonLabel }) => {
                     alt="Why illustration"
                   />
                 </div>
-                <div className={`column is-hidden-tablet is-vcentered ${styles.mobileImage}`}>
+                <div
+                  className={`column is-hidden-tablet is-vcentered ${styles.mobileImage}`}
+                >
                   <Img
                     className={styles.image}
                     fixed={data.fluid.childImageSharp.fixed}
@@ -71,7 +73,12 @@ const HomeWhy: React.FC<IProps> = ({ items, heading, buttonLabel }) => {
                   subheading={subheading}
                 />
               ))}
-              <Button large withBackground label={buttonLabel} className={styles.button} />
+              <Button
+                large
+                withBackground
+                label={buttonLabel}
+                className={styles.button}
+              />
             </div>
           </div>
         </div>

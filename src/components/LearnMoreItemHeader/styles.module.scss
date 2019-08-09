@@ -4,18 +4,28 @@
   background-color: $lightOrange;
   padding: 45px 0 65px;
 }
+
 .heading {
-    font-family: $mabry;
-    font-weight: bold;
-    font-size: 65px;
-    line-height: 71px;
-    color: $black;
+  font-family: $mabry;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 71px;
+  color: $black;
+
+  @include mobileonly {
+    font-size: 38px;
+    line-height: 41px;
+  }
 }
 
 .back {
   display: flex;
   align-items: center;
   margin: 80px 0 20px;
+
+  @include mobileonly {
+    margin: 0;
+  }
 }
 
 .backtext {
@@ -27,12 +37,20 @@
 
 .headerContent {
   padding: 2em;
+
+  @include mobileonly {
+    padding: 2em 1em;
+  }
 }
 
 .headerCount {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @include mobileonly {
+    justify-content: flex-start;
+  }
 }
 
 .count {
@@ -44,4 +62,9 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: $black;
+
+  @include mobileonly {
+    font-size: 30px;
+    line-height: 33px;
+  }
 }
