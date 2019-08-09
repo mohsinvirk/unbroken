@@ -6,6 +6,8 @@ const languages = {
 module.exports = {
   siteMetadata: {
     title: `Unbroken`,
+    siteUrl: `https://mohsin.dev`,
+    url: `https://example.com`,
     languages,
     menu: [
         {label: 'home', slug: '/'},
