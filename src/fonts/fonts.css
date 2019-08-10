@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: url("./MabryPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Druk Wide";
+  src: url("./Druk-WideMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT America Ultra";
+  src: url("./GTAmerica-UltraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America Ultra";
+  src: url("./GTAmerica-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("./GTAmerica-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
