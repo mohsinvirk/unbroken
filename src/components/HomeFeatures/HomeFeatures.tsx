@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import HomeFeatureItem from "./HomeFeatureItem";
 
@@ -27,72 +28,74 @@ const HomeFeatures: React.FC<IProps> = ({
 }) => {
   return (
     <div className={`container ${styles.features}`}>
-      <div className={`columns ${styles.columns}`}>
-        <StaticQuery
-          query={graphql`
-            query EthereumQuery {
-              etherium: file(relativePath: { eq: "etherium.png" }) {
-                childImageSharp {
-                  fluid(maxWidth: 60, quality: 72) {
-                    ...GatsbyImageSharpFluid
+      <ScrollAnimation animateIn="fadeIn" animateOnce duration={1}>
+        <div className={`columns ${styles.columns}`}>
+          <StaticQuery
+            query={graphql`
+              query EthereumQuery {
+                etherium: file(relativePath: { eq: "etherium.png" }) {
+                  childImageSharp {
+                    fluid(maxWidth: 60, quality: 72) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                ideal: file(
+                  relativePath: { eq: "ideal-logo-black-and-white.png" }
+                ) {
+                  childImageSharp {
+                    fluid(maxWidth: 60, quality: 72) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                exchange: file(relativePath: { eq: "exchange.png" }) {
+                  childImageSharp {
+                    fluid(maxWidth: 60, quality: 72) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }
-              ideal: file(
-                relativePath: { eq: "ideal-logo-black-and-white.png" }
-              ) {
-                childImageSharp {
-                  fluid(maxWidth: 60, quality: 72) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-              exchange: file(relativePath: { eq: "exchange.png" }) {
-                childImageSharp {
-                  fluid(maxWidth: 60, quality: 72) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          `}
-          render={data => {
-            return (
-              <>
-                <HomeFeatureItem
-                  heading={ethereumHeading}
-                  subheading={ethereumSubHeading}
-                >
-                  <Img
-                    fluid={data.etherium.childImageSharp.fluid}
-                    alt="etherium"
-                  />
-                </HomeFeatureItem>
+            `}
+            render={data => {
+              return (
+                <>
+                  <HomeFeatureItem
+                    heading={ethereumHeading}
+                    subheading={ethereumSubHeading}
+                  >
+                    <Img
+                      fluid={data.etherium.childImageSharp.fluid}
+                      alt="etherium"
+                    />
+                  </HomeFeatureItem>
 
-                <HomeFeatureItem
-                  heading={idealHeading}
-                  subheading={idealSubHeading}
-                >
-                  <Img
-                    fluid={data.ideal.childImageSharp.fluid}
-                    alt="ideal logo"
-                  />
-                </HomeFeatureItem>
+                  <HomeFeatureItem
+                    heading={idealHeading}
+                    subheading={idealSubHeading}
+                  >
+                    <Img
+                      fluid={data.ideal.childImageSharp.fluid}
+                      alt="ideal logo"
+                    />
+                  </HomeFeatureItem>
 
-                <HomeFeatureItem
-                  heading={exchangeHeading}
-                  subheading={exchangeSubHeading}
-                >
-                  <Img
-                    fluid={data.exchange.childImageSharp.fluid}
-                    alt="exchange"
-                  />
-                </HomeFeatureItem>
-              </>
-            );
-          }}
-        />
-      </div>
+                  <HomeFeatureItem
+                    heading={exchangeHeading}
+                    subheading={exchangeSubHeading}
+                  >
+                    <Img
+                      fluid={data.exchange.childImageSharp.fluid}
+                      alt="exchange"
+                    />
+                  </HomeFeatureItem>
+                </>
+              );
+            }}
+          />
+        </div>
+      </ScrollAnimation>
     </div>
   );
 };

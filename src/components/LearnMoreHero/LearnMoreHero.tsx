@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import Navbar, { INavItems } from "../Navbar/Navbar";
 import MobileNav from "../MobileNav/MobileNav";
@@ -21,23 +22,23 @@ const LeranMoreHero: React.FC<IProps> = ({
   navChevronItems
 }) => {
   return (
-    <>
-      <section className={styles.header}>
+    <section className={styles.header}>
+      <div className="container">
+        <Navbar lang={lang} navItems={navItems} buttonLabel="Sign up" />
+        <MobileNav
+          lang={lang}
+          navArrowItems={navArrowItems}
+          navChevronItems={navChevronItems}
+        />
+      </div>
+      <div>
         <div className="container">
-          <Navbar lang={lang} navItems={navItems} buttonLabel="Sign up" />
-          <MobileNav
-            lang={lang}
-            navArrowItems={navArrowItems}
-            navChevronItems={navChevronItems}
-          />
-        </div>
-        <div>
-          <div className="container">
+          <ScrollAnimation animateIn="fadeIn" animateOnce duration={1}>
             <h1 className={styles.heading}>{heading}</h1>
-          </div>
+          </ScrollAnimation>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 export default LeranMoreHero;

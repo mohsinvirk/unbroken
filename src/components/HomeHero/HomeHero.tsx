@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import Navbar, { INavItems } from "../Navbar/Navbar";
 import MobileNav from "../MobileNav/MobileNav";
@@ -30,7 +31,7 @@ const HomeHero: React.FC<IProps> = ({
   navChevronItems
 }) => {
   return (
-    <>
+    <ScrollAnimation animateIn="fadeIn" animateOnce duration={1}>
       <section className={`${styles.homeHero}`}>
         <div className="container">
           <Navbar lang={lang} navItems={navItems} buttonLabel="Sign up" />
@@ -96,7 +97,7 @@ const HomeHero: React.FC<IProps> = ({
           ></div>
         </div>
       </section>
-    </>
+    </ScrollAnimation>
   );
 };
 export default HomeHero;

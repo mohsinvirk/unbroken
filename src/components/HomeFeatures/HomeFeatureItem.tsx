@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import styles from "./styles.module.scss";
 
@@ -15,13 +16,13 @@ const HomeFeatureItem: React.FC<IProps> = ({
 }) => {
   return (
     <div className={`column ${styles.column}`}>
-      <div>
+      <ScrollAnimation animateIn="fadeIn" duration={1} delay={400}>
         <div className={styles.icon}>{children}</div>
-      </div>
 
-      <div className={styles.heading}>{heading}</div>
+        <div className={styles.heading}>{heading}</div>
 
-      <div className={styles.subheading}>{subheading}</div>
+        <div className={styles.subheading}>{subheading}</div>
+      </ScrollAnimation>
     </div>
   );
 };

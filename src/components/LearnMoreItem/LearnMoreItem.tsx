@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import styles from "./styles.module.scss";
 
@@ -29,22 +30,33 @@ const LearnMoreItem: React.FC<IProps> = ({ lang, items }) => {
               {items.map(item => (
                 <div className="column is-half" key={item.count}>
                   <div className={`${styles.item}`}>
-                    <div
-                      className={styles.circleWithCount}
-                      style={{ backgroundColor: `${item.backgroundColor}` }}
+                    <ScrollAnimation
+                      animateIn="zoomIn" 
+                      duration={1}
                     >
-                      <span className={styles.count}>{item.count}</span>
-                    </div>
+                      <div
+                        className={styles.circleWithCount}
+                        style={{ backgroundColor: `${item.backgroundColor}` }}
+                      >
+                        <span className={styles.count}>{item.count}</span>
+                      </div>
+                    </ScrollAnimation>
 
                     <div className={` ${styles.content}`}>
-                      <h3 className={styles.heading}>{item.heading}</h3>
-                      <p className={styles.text}>{item.text}</p>
-                      <Link
-                        className={styles.link}
-                        to={`/${lang}/${item.linkTo}/`}
+                      <ScrollAnimation
+                        animateIn="fadeIn"
+                        animateOnce
+                        duration={1}
                       >
-                        {item.linktext} <img src={icon} alt="->" />
-                      </Link>
+                        <h3 className={styles.heading}>{item.heading}</h3>
+                        <p className={styles.text}>{item.text}</p>
+                        <Link
+                          className={styles.link}
+                          to={`/${lang}/${item.linkTo}/`}
+                        >
+                          {item.linktext} <img src={icon} alt="->" />
+                        </Link>
+                      </ScrollAnimation>
                     </div>
                   </div>
                 </div>

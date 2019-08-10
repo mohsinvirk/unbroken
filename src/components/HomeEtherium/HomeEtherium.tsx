@@ -1,8 +1,8 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import ScrollAnimation from "react-animate-on-scroll";
 
-import Navbar, { INavItems } from "../Navbar/Navbar";
 import Button from "../Button/Button";
 
 import styles from "./styles.module.scss";
@@ -19,7 +19,7 @@ const HomeEtherium: React.FC<IProps> = ({
   buttonLabel
 }) => {
   return (
-    <>
+    <ScrollAnimation animateIn="fadeIn" animateOnce duration={2} delay={400}>
       <section className={`${styles.homeHero}`}>
         <div>
           <div className="">
@@ -89,7 +89,7 @@ const HomeEtherium: React.FC<IProps> = ({
           </div>
         </div>
       </section>
-    </>
+    </ScrollAnimation>
   );
 };
 export default HomeEtherium;
