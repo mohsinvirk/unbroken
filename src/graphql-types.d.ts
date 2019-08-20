@@ -1,4 +1,7 @@
 /* tslint:disable */
+
+// TODO: Please explain what is the purpose of this file.
+
 export interface ILangs {
     link: string;
     langKey?: string

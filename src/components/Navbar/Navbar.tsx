@@ -18,6 +18,7 @@ interface IProps {
   buttonLabel: string;
 }
 
+// TODO: Shouldn't this be named NavBar, not Header.
 const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
   const [isBurgerActive, setBurgerActive] = React.useState<boolean>(false);
 
@@ -25,8 +26,7 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
     <div className={`navbar-item ${styles.navbarItem}`} key={index}>
       <Link
         to={`/${lang}/${item.slug}`}
-        className={`${styles.navbarItemLink}  ${item.isActive &&
-          styles.isActive}`}
+        className={`${styles.navbarItemLink} ${item.isActive && styles.isActive}`}
       >
         {item.name}
       </Link>

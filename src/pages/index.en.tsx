@@ -126,6 +126,7 @@ const IndexPage = props => (
 
 export default IndexPage;
 
+// TODO: please explain why this code is needed here.
 export const pageQuery = graphql`
   query LayoutIndexEn {
     site {
