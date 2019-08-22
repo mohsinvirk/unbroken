@@ -1,5 +1,4 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from "react"; 
 import Layout from "./index";
 import { addLocaleData } from "react-intl";
 

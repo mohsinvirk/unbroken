@@ -1,5 +1,4 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from "react"; 
 import Link from "gatsby-link";
 import SelectLanguage from "./SelectLanguage";
 
