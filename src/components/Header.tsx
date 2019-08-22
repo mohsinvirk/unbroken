@@ -1,4 +1,6 @@
-import React from "react"; 
+// TODO: This seems to be an unremoved relic from the starter pack. (it does show how to make a language menu)
+
+import React from "react";
 import Link from "gatsby-link";
 import SelectLanguage from "./SelectLanguage";
 
