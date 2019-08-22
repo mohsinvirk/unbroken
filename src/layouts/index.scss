@@ -1,10 +1,13 @@
+// The animation lib from node_modules
 @import "~animate.css/animate.min.css";
 
+// The @font-face statements
 @import "../fonts/fonts.css";
-// Importing variables
+
+// Our variables (colors, fonts and breakpoints)
 @import "../styles/variables.scss";
 
-// Importing Bulma from node_modules
+// The Bulma lib from node_modules
 @import "~bulma/bulma.sass";
 
 .navbar {

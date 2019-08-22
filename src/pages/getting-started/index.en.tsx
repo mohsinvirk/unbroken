@@ -96,6 +96,7 @@ const faqItems = [
   }
 ];
 
+// TODO: the big pieces of text passed as attributes looks not too good. I think putting them in const structs as the others have been above is better.
 const IndexPage = props => (
   <Layout location={props.location} {...props}>
     <>
@@ -148,7 +149,7 @@ const IndexPage = props => (
               downloadItems={downloadItem}
             />
 
-            <FAQ heading="F. A. Q" faqItems={faqItems} />
+            <FAQ heading="F. A. Q." faqItems={faqItems} />
 
             <LearnMoreHelp heading="How can we help?" />
           </div>
@@ -160,6 +161,7 @@ const IndexPage = props => (
 
 export default IndexPage;
 
+// TODO: please explain why this code is here.
 export const pageQuery = graphql`
   query GettingStartedEn {
     site {

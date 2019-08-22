@@ -1,3 +1,5 @@
+// TODO: Please explain why this file is needed (I dont see it in the angeloocana's starter pack).
+
 declare module "*.scss" {
   const content: { [className: string]: string };
   export = content;
