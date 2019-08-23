@@ -23,7 +23,7 @@ const Footer: React.FC<IProps> = ({ lang, footerItems }) => {
       <div className="container">
         <div className="columns is-mobile is-multiline">
           <div className="column is-half-desktop is-full-mobile">
-            <Link to={`/${lang}/`}>
+            <Link to={`/${lang}/`} className={styles.logo}>
               <img src={logo} width="112" height="28" />
             </Link>
           </div>

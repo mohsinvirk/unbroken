@@ -32,6 +32,10 @@
   color: $black;
   margin-right: 10px;
 
+  &:hover {
+      color: $orange;
+  }
+
   @include mobileonly {
     font-size: 16px;
   }

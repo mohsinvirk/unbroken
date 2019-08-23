@@ -6,10 +6,14 @@
   align-items: center;
   height: auto;
   font-family: $gtamerica;
+  font-weight: bold;
   font-size: 1rem;
   text-align: center;
   border: 1px solid transparent;
   border-radius: 50px;
+  &:focus-within {
+    outline: none;
+  }
 
   &:hover {
     cursor: pointer;
@@ -20,8 +24,8 @@
   background-color: $orange;
   color: $white;
 
-  &:focus-within {
-    outline: none;
+  &:hover {
+    background-color: $darkBlue;
   }
 }
 
@@ -34,6 +38,10 @@
     background-color: $orange;
     color: $white;
     border: 1px solid transparent;
+  }
+
+  @include mobileonly {
+    background-color: rgba(243, 129, 176, 0.3);
   }
 }
 

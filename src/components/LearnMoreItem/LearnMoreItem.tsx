@@ -30,33 +30,22 @@ const LearnMoreItem: React.FC<IProps> = ({ lang, items }) => {
               {items.map(item => (
                 <div className="column is-half" key={item.count}>
                   <div className={`${styles.item}`}>
-                    <ScrollAnimation
-                      animateIn="zoomIn" 
-                      duration={1}
+                    <div
+                      className={styles.circleWithCount}
+                      style={{ backgroundColor: `${item.backgroundColor}` }}
                     >
-                      <div
-                        className={styles.circleWithCount}
-                        style={{ backgroundColor: `${item.backgroundColor}` }}
-                      >
-                        <span className={styles.count}>{item.count}</span>
-                      </div>
-                    </ScrollAnimation>
+                      <span className={styles.count}>{item.count}</span>
+                    </div>
 
                     <div className={` ${styles.content}`}>
-                      <ScrollAnimation
-                        animateIn="fadeIn"
-                        animateOnce
-                        duration={1}
+                      <h3 className={styles.heading}>{item.heading}</h3>
+                      <p className={styles.text}>{item.text}</p>
+                      <Link
+                        className={styles.link}
+                        to={`/${lang}/${item.linkTo}/`}
                       >
-                        <h3 className={styles.heading}>{item.heading}</h3>
-                        <p className={styles.text}>{item.text}</p>
-                        <Link
-                          className={styles.link}
-                          to={`/${lang}/${item.linkTo}/`}
-                        >
-                          {item.linktext} <img src={icon} alt="->" />
-                        </Link>
-                      </ScrollAnimation>
+                        {item.linktext} <img src={icon} alt="->" />
+                      </Link>
                     </div>
                   </div>
                 </div>

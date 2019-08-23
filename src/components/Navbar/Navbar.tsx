@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 
 import Button from "../Button/Button";
+import SelectLanguages from "../SelectLanguage";
 
 import styles from "./styles.module.scss";
 
@@ -16,17 +17,18 @@ interface IProps {
   lang: string;
   navItems: Array<INavItems>;
   buttonLabel: string;
+  langs?: Array<string>;
 }
 
-// TODO: Shouldn't this be named NavBar, not Header.
-const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
+const Navbar: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
   const [isBurgerActive, setBurgerActive] = React.useState<boolean>(false);
 
   const navbarLinks = navItems.map((item, index) => (
     <div className={`navbar-item ${styles.navbarItem}`} key={index}>
       <Link
         to={`/${lang}/${item.slug}`}
-        className={`${styles.navbarItemLink} ${item.isActive && styles.isActive}`}
+        className={`${styles.navbarItemLink} ${item.isActive &&
+          styles.isActive}`}
       >
         {item.name}
       </Link>
@@ -42,7 +44,7 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
       >
         <div className="navbar-brand">
           <Link className="navbar-item" to={`/${lang}/`}>
-            <img src={logo} width="112" height="28" />
+            <p className={styles.logo}>Unbroken</p>
           </Link>
 
           <a
@@ -70,11 +72,13 @@ const Header: React.FC<IProps> = ({ lang, navItems, buttonLabel }) => {
               medium
               withBackground
               label={buttonLabel}
+              to=""
             />
+            <SelectLanguages />
           </div>
         </div>
       </nav>
     </div>
   );
 };
-export default Header;
+export default Navbar;

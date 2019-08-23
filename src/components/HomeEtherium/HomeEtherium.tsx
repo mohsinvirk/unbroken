@@ -19,7 +19,6 @@ const HomeEtherium: React.FC<IProps> = ({
   buttonLabel
 }) => {
   return (
-    <ScrollAnimation animateIn="fadeIn" animateOnce duration={2} delay={400}>
       <section className={`${styles.homeHero}`}>
         <div>
           <div className="">
@@ -88,8 +87,7 @@ const HomeEtherium: React.FC<IProps> = ({
             </div>
           </div>
         </div>
-      </section>
-    </ScrollAnimation>
+      </section> 
   );
 };
 export default HomeEtherium;

@@ -3,7 +3,7 @@
 .help {
   margin: 50px 0;
 
-  @include mobileonly {
+  @include touchonly {
     margin: 50px 0;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@
   line-height: 30px;
   color: $black;
 
-  @include mobileonly {
+  @include touchonly {
     text-align: center;
   }
 }
@@ -31,7 +31,7 @@
   color: $lightBlack;
   margin-bottom: 20px;
 
-  @include mobileonly {
+  @include touchonly {
     text-align: center;
   }
 }

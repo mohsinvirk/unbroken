@@ -97,8 +97,8 @@ const MobileNav: React.FC<IProps> = ({
             </Link>
           ) : (
             <Link className="navbar-item" to={`/${lang}/`}>
-              <img src={logoBlack} width="112" height="28" />
-            </Link>
+            <p className={styles.logo}>Unbroken</p>
+          </Link>
           )}
 
           <a

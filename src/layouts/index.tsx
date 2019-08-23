@@ -1,14 +1,17 @@
 import React from "react";
-import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { getCurrentLangKey, getLangs, getUrlForLang } from "ptz-i18n";
 import { IntlProvider } from "react-intl";
 
 import Footer from "../components/Footer/Footer";
-import { Elocales } from "../data/languages";
 
 import "intl";
 import "./index.scss";
+
+export enum Elocales {
+  en = "en",
+  pt = "pt"
+}
 
 const footerItems = [
   {
@@ -76,15 +79,13 @@ interface IProps {
       };
     };
   };
-  i18nMessages: any;
 }
 
 const TemplateWrapper: React.FC<IProps> = ({
   lang,
   children,
   data,
-  location,
-  i18nMessages
+  location
 }) => {
   const url = location.pathname;
   const { langs, defaultLangKey } = data.site.siteMetadata.languages;
@@ -93,7 +94,7 @@ const TemplateWrapper: React.FC<IProps> = ({
   const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
 
   return (
-    <IntlProvider locale={langKey} messages={i18nMessages}>
+    <IntlProvider locale={langKey}>
       <div>
         <Helmet
           title="Unbroken"
@@ -110,16 +111,3 @@ const TemplateWrapper: React.FC<IProps> = ({
 };
 
 export default TemplateWrapper;
-
-export const pageQuery = graphql`
-  query Layout {
-    site {
-      siteMetadata {
-        languages {
-          defaultLangKey
-          langs
-        }
-      }
-    }
-  }
-`;

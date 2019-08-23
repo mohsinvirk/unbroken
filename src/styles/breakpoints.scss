@@ -35,8 +35,14 @@ $mobileWidth: 480px;
   }
 }
 
-@mixin mobileonly {
-    @media (max-width: #{ $mobileWidth }) {
-      @content;
-    }
+@mixin touchonly {
+  @media (max-width: #{ $tabletWidth }) {
+    @content;
   }
+}
+
+@mixin mobileonly {
+  @media (max-width: #{ $mobileWidth }) {
+    @content;
+  }
+}
