@@ -1,33 +1,32 @@
-// TODO: This seems to be an unremoved relic from the starter pack. (it does show how to make a language menu)
+// TODO: this component will be used as flags to SELECT the language.
 
 import React from "react";
 import Link from "gatsby-link";
 
-export interface ILangs {
-  link: string;
-  langKey?: string;
-  selected: boolean;
+import styles from "./styles.module.scss";
+
+enum Elangs {
+  en = "en",
+  pt = "pt"
 }
 
-interface IProps {
-  langs: Array<ILangs>;
-}
-
-const SelectLanguage: React.FC<IProps> = ({ langs }) => {
+const SelectLanguage: React.FC = () => {
+  const { en, pt } = Elangs;
+  const langs = [en, pt];
   const links = langs.map(lang => (
     <Link
-      to={lang.link}
-      key={lang.langKey}
+      to={lang}
+      key={lang}
       style={{
         color: "white"
       }}
     >
-      <li data-selected={lang.selected}>{lang.langKey}</li>
+      <span className={`flag-icon flag-icon-${lang === en ? "us" : lang} ${styles.flag} `} />
     </Link>
   ));
 
   return (
-    <div>
+    <div className={styles.flags}>
       <ul>{links}</ul>
     </div>
   );

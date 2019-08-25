@@ -87,6 +87,7 @@ const IndexPage = props => (
         subheading1="Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
         subheading2="Aenean commodo ligula eget dolor."
         buttonLabel="Get started"
+        to="/en/getting-started"
       />
 
       <HomeFeatures
@@ -127,6 +128,7 @@ const IndexPage = props => (
 export default IndexPage;
 
 // TODO: please explain why this code is needed here.
+// EXPLANATION: This is the graphQL query, where we dynamically providing siteMetadata at page level  created in gatsby-config.js
 export const pageQuery = graphql`
   query LayoutIndexEn {
     site {

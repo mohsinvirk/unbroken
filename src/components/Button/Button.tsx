@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
 
-import Navbar, { INavItems } from "../Navbar/Navbar";
-
 import styles from "./styles.module.scss";
 
 interface IProps {
@@ -13,6 +11,7 @@ interface IProps {
   withBackground?: boolean;
   withoutBackground?: boolean;
   label?: string;
+  to?: string;
 }
 
 const Button: React.FC<IProps> = ({
@@ -22,7 +21,8 @@ const Button: React.FC<IProps> = ({
   medium,
   withBackground,
   withoutBackground,
-  label
+  label,
+  to
 }) => {
   return (
     <button
@@ -31,7 +31,7 @@ const Button: React.FC<IProps> = ({
         styles.withBackground} ${withoutBackground &&
         styles.withoutBackground} ${className}`}
     >
-      {label}
+      {to ? <Link to={to} style={{color: 'inherit'}}>{label}</Link> : label}
     </button>
   );
 };

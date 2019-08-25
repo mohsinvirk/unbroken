@@ -5,10 +5,26 @@
     display: flex;
     flex-direction: column-reverse;
   }
+
+  @include touchonly {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .column {
   @include mobileonly {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &:not(:first-child) {
+      border-bottom: 1px solid #e3dfda;
+      margin: 0 20px;
+    }
+  }
+
+  @include touchonly {
     display: flex;
     align-items: center;
     flex-direction: column;

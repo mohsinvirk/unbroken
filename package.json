@@ -5,6 +5,7 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "bulma": "^0.7.5",
+    "flag-icon-css": "^3.3.0",
     "gatsby": "^2.13.41",
     "gatsby-image": "^2.2.7",
     "gatsby-link": "^2.2.3",

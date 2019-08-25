@@ -15,14 +15,12 @@ const HomeFeatureItem: React.FC<IProps> = ({
   subheading
 }) => {
   return (
-    <div className={`column ${styles.column}`}>
-      <ScrollAnimation animateIn="fadeIn" duration={1} delay={400}>
+    <div className={`column ${styles.column}`}> 
         <div className={styles.icon}>{children}</div>
 
         <div className={styles.heading}>{heading}</div>
 
         <div className={styles.subheading}>{subheading}</div>
-      </ScrollAnimation>
     </div>
   );
 };
