@@ -128,7 +128,8 @@ const IndexPage = props => (
 export default IndexPage;
 
 // TODO: please explain why this code is needed here.
-// EXPLANATION: This is the graphQL query, where we dynamically providing siteMetadata at page level  created in gatsby-config.js
+// EXPLANATION: This is the graphQL query, where we dynamically providing `siteMetadata` at page level created in `gatsby-config.js`.
+// TODO: Still not sure why this code is here...
 export const pageQuery = graphql`
   query LayoutIndexEn {
     site {

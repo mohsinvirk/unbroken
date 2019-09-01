@@ -1,6 +1,5 @@
-// TODO: Please explain why this file is needed (I dont see it in the angeloocana's starter pack).
-// EXPLANATION: This is declaration file. some types aren't recognized by TypeScript so we
-// use This file to declare them so Transpiler understands it
+// This TypeScript declaration file (`*.d.ts`) is needed for some types cannot be inferred and thus need to be explicitly defined.
+
 declare module "*.scss" {
   const content: { [className: string]: string };
   export = content;
