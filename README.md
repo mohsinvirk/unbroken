@@ -23,15 +23,15 @@ This is a [Gatsby](https://www.gatsbyjs.org) (static site with React) project, b
 
 ### TADAs
 
-* "Using the global `graphql` tag" deprecation warning when starting development server.
+* "Using the global `graphql` tag" deprecation warning when starting development server fixed.
 
-* No flag button language selection (may always route to `/` if that makes it easier).
+* Flag button language selection added (may always route to `/` if that makes it easier).
 
-* Logo is blurry. An SVG logo is provided in the designs.
+* Logo in the header is no longer blurry.
 
 * Animation have been removed, `animate.css` still included to roll yr own
 
-* Font bold on main buttons
+* Font bold on main buttons.
 
 * FAQ "links" open collapsed text
 
@@ -49,8 +49,6 @@ This is a [Gatsby](https://www.gatsbyjs.org) (static site with React) project, b
 
 
 ### TODOs / FIXMEs
-
-I know it's not the final delivery, but I still wanted to make sure to provide as much feedback as possible as this point.
 
 * "unmet peer dependency" warnings when fetching deps. More info here (2nd answer seems very insightful) https://stackoverflow.com/questions/35738346/how-do-i-fix-the-npm-unmet-peer-dependency-warning
 
