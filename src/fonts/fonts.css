@@ -1,5 +1,7 @@
-/* TODO: Find out if all these font variants are actually used or explain that it does not harm to have them here while not using them. Commenting out unused variants is okay if that helps. */
-/* EXPLANATION: These font files won't harm. only those files will be loaded which we used, others will be ignored */
+/* Referring to more font files here than are actually used by the application won't harm performance.
+   Only those files will be loaded which we used, others will be ignored.
+*/
+
 @font-face {
   font-family: "Mabry Pro";
   src: url("./MabryPro-Bold.ttf") format("truetype");
